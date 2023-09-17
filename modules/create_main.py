@@ -1,7 +1,7 @@
 import os
 
 # Function to generate the main.py file based on the given screens and their attributes
-def create_main(screen_dict):
+def create_main(screen_dict, transition='FadeTransition'):
     """
     Generates the main.py file based on a given dictionary of screens and their attributes.
 
@@ -9,6 +9,7 @@ def create_main(screen_dict):
     - screen_dict (dict): A dictionary where the key is the name of the key screen,
                           and the value is another dictionary containing all the data for the screen,
                           including reachable_screens and customization parameters.
+    - transition (str): The type of transition to use between screens.
 
     Returns:
     - str: The path to the generated main.py file.
@@ -31,10 +32,10 @@ from kivy.uix.screenmanager import ScreenManager, FadeTransition
     import_lines = "\n".join([f"from screens.{key} import {key}Screen" for key in screen_dict.keys()])
 
     # Generate ScreenManager code
-    screen_manager_code = """class MainApp(App):
+    screen_manager_code = f"""class MainApp(App):
 
     def build(self):
-        sm = ScreenManager(transition=FadeTransition())"""
+        sm = ScreenManager(transition={transition}())"""
 
     # Generate screen addition lines
     screen_addition_lines = []
