@@ -50,7 +50,7 @@ def create_kv(key_screen, reachable_screens,
         buttons.append(button)
 
     # Combine the .kv content, BoxLayouts, and buttons
-    full_kv_content = kv_content + "\n".join(box_layouts) + "\n" + "\n".join(buttons)
+    full_kv_content = "\n".join([kv_content] + box_layouts + buttons)
 
     # Write the generated text to the .kv file
     output_file_path = os.path.join(directory, f"{key_screen}.kv")
@@ -58,6 +58,3 @@ def create_kv(key_screen, reachable_screens,
         f.write(full_kv_content)
 
     return output_file_path
-
-# Uncomment to test the function
-# create_kv("a", ["b", "c"], grid_columns=3)
