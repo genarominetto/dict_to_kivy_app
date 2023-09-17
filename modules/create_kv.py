@@ -20,7 +20,7 @@ def create_kv(key_screen, reachable_screens,
                 size: self.size
         do_scroll_x: False
         GridLayout:
-            cols: {grid_columns}
+            cols: 1
             size_hint_y: None
             height: self.minimum_height
             padding: 10
@@ -29,28 +29,29 @@ def create_kv(key_screen, reachable_screens,
                     rgb: {color[0]}, {color[1]}, {color[2]}
                 Rectangle:
                     pos: self.pos
-                    size: self.size"""
-
-    # Generate BoxLayouts
-    box_layouts = []
-    for i in range(grid_columns):
-        box_layout = f"""            BoxLayout:
+                    size: self.size
+            Label:
+                text: '{key_screen.capitalize()}'
                 size_hint_y: None
-                height: {box_layout_height}"""
-        box_layouts.append(box_layout)
+                height: {box_layout_height}
+            GridLayout:
+                cols: {grid_columns}
+                size_hint_y: None
+                height: self.minimum_height
+                padding: 10"""
 
     # Generate buttons for each reachable screen
     buttons = []
     for screen in reachable_screens:
-        button = f"""            Button:
-                text: '{screen.capitalize()}'
-                size_hint_y: None
-                height: {button_height}
-                on_press: root.go_to_{screen}()"""
+        button = f"""                Button:
+                    text: '{screen.capitalize()}'
+                    size_hint_y: None
+                    height: {button_height}
+                    on_press: root.go_to_{screen}()"""
         buttons.append(button)
 
-    # Combine the .kv content, BoxLayouts, and buttons
-    full_kv_content = "\n".join([kv_content] + box_layouts + buttons)
+    # Combine the .kv content and buttons
+    full_kv_content = "\n".join([kv_content] + buttons)
 
     # Write the generated text to the .kv file
     output_file_path = os.path.join(directory, f"{key_screen}.kv")
