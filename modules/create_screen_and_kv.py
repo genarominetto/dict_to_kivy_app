@@ -3,7 +3,7 @@ from dict_to_kivy_app.modules.create_screen import create_screen
 from dict_to_kivy_app.modules.create_kv import create_kv
 
 # Function to generate both Python (.py) and Kivy (.kv) files based on a given dictionary of screens and their attributes
-def create_screen_and_kv(screen_dict, title_height=30):
+def create_screen_and_kv(screen_dict, title_height):
     """
     Generates both Python (.py) and Kivy (.kv) files based on a given dictionary of screens and their attributes.
     The Python files are stored in a 'screens/' directory and the .kv files in a 'kv/' directory.
