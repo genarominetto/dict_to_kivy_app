@@ -2,7 +2,7 @@ import os
 
 def create_kv(key_screen, reachable_screens,
               grid_columns=1, button_height=40, 
-              box_layout_height=30, color=(1, 0, 0)):
+              title_height=30, color=(1, 0, 0)):
 
     # Create the directory if it doesn't exist
     directory = 'kv/'
