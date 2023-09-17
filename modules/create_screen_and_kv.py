@@ -23,7 +23,7 @@ def create_screen_and_kv(screen_dict):
     # Define parameters specific to Python and .kv files
     py_specific_params = set()
     kv_specific_params = {'grid_color', 'scroll_color', 'grid_columns', 'button_height',
-                          'button_text_prefix', 'padding', 'box_layout_height', 'scroll_x',
+                          'button_text_prefix', 'padding', 'title_height', 'scroll_x',
                           'grid_height', 'size_hint_y', 'color'}  # added 'color'
 
 
