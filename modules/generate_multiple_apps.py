@@ -1,6 +1,7 @@
 import os
 import shutil
 from dict_to_kivy_app.modules.generate_complete_app import generate_complete_app
+from dict_to_kivy_app.modules.generate_main_py_file import generate_main_py_file
 
 def generate_multiple_apps(app_dicts, apps_folder_name="apps"):
     """
