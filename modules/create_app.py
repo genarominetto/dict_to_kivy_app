@@ -1,7 +1,7 @@
 import os
 import shutil
 from dict_to_kivy_app.modules.create_main import create_main
-from dict_to_kivy_app.modules.generate_screen_and_kv_files import generate_screen_and_kv_files
+from dict_to_kivy_app.modules.create_screen_and_kv import create_screen_and_kv
 
 def create_app(screen_dict, folder_name, app_name, compress_and_download=True):
     """
