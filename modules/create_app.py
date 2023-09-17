@@ -1,8 +1,6 @@
 import os
 import shutil
-from collections import deque  # Importing deque for Breadth-First Search (BFS)
-
-# Assuming these imports match your project structure
+from collections import deque
 from dict_to_kivy_app.modules.create_main import create_main
 from dict_to_kivy_app.modules.create_screen_and_kv import create_screen_and_kv
 
