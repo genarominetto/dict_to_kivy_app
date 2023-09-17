@@ -33,7 +33,7 @@ def create_kv(key_screen, reachable_screens,
             Label:
                 text: '{key_screen.capitalize()}'
                 size_hint_y: None
-                height: {box_layout_height}
+                height: {title_height}
             GridLayout:
                 cols: {grid_columns}
                 size_hint_y: None
