@@ -1,8 +1,6 @@
 import os
 import shutil
 
-import shutil
-
 def generate_multiple_apps(app_dicts, apps_folder_name="apps"):
     """
     Generates a complete Kivy apps structure based on a list of dictionaries of screens and their attributes.
