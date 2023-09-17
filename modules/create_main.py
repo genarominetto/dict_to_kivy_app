@@ -1,7 +1,7 @@
 import os
 
 # Function to generate the main.py file based on the given screens and their attributes
-def create_main(screen_dict, transition='FadeTransition'):
+def create_main(screen_dict, title_height, transition='FadeTransition'):
     """
     Generates the main.py file based on a given dictionary of screens and their attributes.
 
