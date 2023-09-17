@@ -1,6 +1,6 @@
 import os
 import shutil
-from dict_to_kivy_app.modules.generate_main_py_file import generate_main_py_file
+from dict_to_kivy_app.modules.create_main import create_main
 from dict_to_kivy_app.modules.generate_screen_and_kv_files import generate_screen_and_kv_files
 
 def create_app(screen_dict, folder_name, app_name, compress_and_download=True):
@@ -41,7 +41,7 @@ def create_app(screen_dict, folder_name, app_name, compress_and_download=True):
     os.makedirs(target_app_directory)
 
     # Generate main.py file
-    main_py_file_path = generate_main_py_file(screen_dict)
+    main_py_file_path = create_main(screen_dict)
     shutil.move(main_py_file_path, os.path.join(target_app_directory, 'main.py'))
 
     # Generate screen and kv files
