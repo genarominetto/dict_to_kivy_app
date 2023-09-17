@@ -1,7 +1,7 @@
 import os
 
 # Update the function to avoid capitalizing the left part of the screen class name in the .py file
-def generate_screen_class_and_save_file(key_screen, reachable_screens, directory='screens/'):
+def c(key_screen, reachable_screens, directory='screens/'):
     """
     Generates a Python (.py) file that defines a screen class with methods to navigate to other screens.
 
