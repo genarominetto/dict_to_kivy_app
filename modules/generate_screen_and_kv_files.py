@@ -1,4 +1,5 @@
 import os
+from dict_to_kivy_app.modules.generate_screen_class_and_save_file import generate_screen_class_and_save_file
 
 # Function to generate both Python (.py) and Kivy (.kv) files based on a given dictionary of screens and their attributes
 def generate_screen_and_kv_files(screen_dict):
