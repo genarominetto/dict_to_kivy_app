@@ -1,7 +1,7 @@
 import os
 
 # Function to generate Kivy (.kv) file content for a screen
-def generate_kv_content_and_save_file(key_screen, reachable_screens,
+def create_kv(key_screen, reachable_screens,
                                       grid_color=(0, 0, 1), scroll_color=(1, 0, 0), grid_columns=1,
                                       button_height=40, button_text_prefix='Go to Screen ', padding=10,
                                       box_layout_height=30, scroll_x=False, grid_height='self.minimum_height',
