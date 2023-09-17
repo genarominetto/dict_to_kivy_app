@@ -1,5 +1,6 @@
 import os
 import shutil
+from dict_to_kivy_app.modules.generate_main_py_file import generate_main_py_file
 
 def generate_complete_app(screen_dict, folder_name):
     """
