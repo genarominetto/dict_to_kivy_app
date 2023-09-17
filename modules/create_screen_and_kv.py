@@ -1,9 +1,9 @@
 import os
-from dict_to_kivy_app.modules.generate_screen_class_and_save_file import generate_screen_class_and_save_file
-from dict_to_kivy_app.modules.generate_kv_content_and_save_file import generate_kv_content_and_save_file
+from dict_to_kivy_app.modules.create_screen import create_screen
+from dict_to_kivy_app.modules.create_kv import create_kv
 
 # Function to generate both Python (.py) and Kivy (.kv) files based on a given dictionary of screens and their attributes
-def generate_screen_and_kv_files(screen_dict):
+def create_screen_and_kv(screen_dict):
     """
     Generates both Python (.py) and Kivy (.kv) files based on a given dictionary of screens and their attributes.
     The Python files are stored in a 'screens/' directory and the .kv files in a 'kv/' directory.
@@ -43,11 +43,11 @@ def generate_screen_and_kv_files(screen_dict):
         kv_custom_params = {k: v for k, v in attributes.items() if k in kv_specific_params}
 
         # Generate the Python (.py) file using the existing function
-        py_file_path = generate_screen_class_and_save_file(key_screen, reachable_screens, directory=py_directory, **py_custom_params)
+        py_file_path = create_screen(key_screen, reachable_screens, directory=py_directory, **py_custom_params)
         generated_py_files.append(py_file_path)
 
         # Generate the .kv file using the existing function
-        kv_file_path = generate_kv_content_and_save_file(key_screen, reachable_screens, directory=kv_directory, **kv_custom_params)
+        kv_file_path = create_kv(key_screen, reachable_screens, directory=kv_directory, **kv_custom_params)
         generated_kv_files.append(kv_file_path)
 
     return generated_py_files, generated_kv_files
