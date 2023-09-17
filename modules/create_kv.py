@@ -1,7 +1,7 @@
 import os
 
 def create_kv(key_screen, reachable_screens,
-              grid_columns=1, button_height=40, 
+              grid_columns=1, button_height=80, 
               title_height=30, color=(1, 0, 0)):
 
     def adjust_color(c, amount=0.1):
