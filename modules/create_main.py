@@ -1,7 +1,7 @@
 import os
 
 # Function to generate the main.py file based on the given screens and their attributes
-def generate_main_py_file(screen_dict):
+def create_main(screen_dict):
     """
     Generates the main.py file based on a given dictionary of screens and their attributes.
 
