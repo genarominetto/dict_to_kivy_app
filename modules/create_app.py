@@ -45,7 +45,7 @@ def create_app(screen_dict, folder_name, app_name, compress_and_download=True):
     shutil.move(main_py_file_path, os.path.join(target_app_directory, 'main.py'))
 
     # Generate screen and kv files
-    py_files, kv_files = generate_screen_and_kv_files(screen_dict)
+    py_files, kv_files = create_screen_and_kv(screen_dict)
 
     # Move the generated files to the target directory
     for file_path in py_files + kv_files:
