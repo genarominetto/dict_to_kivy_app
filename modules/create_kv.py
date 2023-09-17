@@ -4,18 +4,20 @@ def create_kv(key_screen, reachable_screens,
               grid_columns=1, button_height=40, 
               title_height=30, color=(1, 0, 0)):
 
-    def lighten_color(c, amount=0.1):
-        return min(1, c + amount)
+    def adjust_color(c, amount=0.1):
+        return min(1, max(0, c + amount))
 
-    # Calculate lighter color for the title
-    title_color = (lighten_color(color[0]), lighten_color(color[1]), lighten_color(color[2]))
+    # Calculate the average of the given color
+    avg_color = sum(color) / 3.0
+
+    # Adjust the title background color based on the average
+    adjust_amount = 0.1 if avg_color > 0.5 else -0.1
+    title_color = (adjust_color(color[0], adjust_amount), 
+                   adjust_color(color[1], adjust_amount), 
+                   adjust_color(color[2], adjust_amount))
 
     # Calculate contrast color for the title text
-    avg_color = sum(color) / 3.0
-    if avg_color > 0.5:
-        text_color = (0, 0, 0)  # black
-    else:
-        text_color = (1, 1, 1)  # white
+    text_color = (0, 0, 0) if avg_color > 0.5 else (1, 1, 1)
 
     # Create the directory if it doesn't exist
     directory = 'kv/'
@@ -37,15 +39,15 @@ def create_kv(key_screen, reachable_screens,
             size_hint_y: None
             height: self.minimum_height
             padding: 10
-            canvas.before:
-                Color:
-                    rgb: {title_color[0]}, {title_color[1]}, {title_color[2]}
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
             Label:
                 text: '{key_screen.capitalize()}'
                 color: {text_color}
+                canvas.before:
+                    Color:
+                        rgb: {title_color[0]}, {title_color[1]}, {title_color[2]}
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
                 size_hint_y: None
                 height: {title_height}
             GridLayout:
