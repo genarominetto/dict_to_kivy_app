@@ -24,7 +24,8 @@ def create_screen_and_kv(screen_dict):
     py_specific_params = set()
     kv_specific_params = {'grid_color', 'scroll_color', 'grid_columns', 'button_height',
                           'button_text_prefix', 'padding', 'box_layout_height', 'scroll_x',
-                          'grid_height', 'size_hint_y'}
+                          'grid_height', 'size_hint_y', 'color'}  # added 'color'
+
 
     # Create the directories if they don't exist
     py_directory = 'app/screens/'
@@ -46,8 +47,8 @@ def create_screen_and_kv(screen_dict):
         py_file_path = create_screen(key_screen, reachable_screens, directory=py_directory, **py_custom_params)
         generated_py_files.append(py_file_path)
 
-        # Generate the .kv file using the existing function
-        kv_file_path = create_kv(key_screen, reachable_screens, directory=kv_directory, **kv_custom_params)
+        # Generate the .kv file using the updated function
+        kv_file_path = create_kv(key_screen, reachable_screens, **kv_custom_params)
         generated_kv_files.append(kv_file_path)
 
     return generated_py_files, generated_kv_files
