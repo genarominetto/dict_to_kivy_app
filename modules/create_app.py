@@ -33,7 +33,7 @@ def _validate_reachability(screen_dict):
             example_missing_screen = next(iter(missing_screens), None)  # Get the first missing screen as an example
             raise ValueError(f"Screen '{start_screen}' cannot reach screen '{example_missing_screen}'. Aborting app generation.")
 
-def create_app(screen_dict, folder_name, app_name, compress_and_download=True, title_height=30, transition='SlideTransition'):
+def create_app(screen_dict, folder_name, app_name, transition='FadeTransition', compress_and_download=True):
     # Validate screen dictionary
     if not screen_dict:
         raise ValueError("No screens provided. Aborting app generation.")
@@ -51,7 +51,7 @@ def create_app(screen_dict, folder_name, app_name, compress_and_download=True, t
     os.makedirs(target_app_directory)
 
     # Generate main.py file
-    main_py_file_path = create_main(screen_dict, transition=transition)  # Passed transition parameter
+    main_py_file_path = create_main(screen_dict, transition)
     shutil.move(main_py_file_path, os.path.join(target_app_directory, 'main.py'))
 
     # Generate screen and kv files
