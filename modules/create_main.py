@@ -20,9 +20,9 @@ def create_main(screen_dict, title_height, transition='FadeTransition'):
         os.makedirs(directory)
 
     # Initialize parts of the main.py file
-    header = """from kivy.lang import Builder
+    header = f"""from kivy.lang import Builder
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, FadeTransition
+from kivy.uix.screenmanager import ScreenManager, {transition}
 """
 
     # Generate KV file loading lines with a preceding comment
