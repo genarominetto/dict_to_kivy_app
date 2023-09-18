@@ -33,8 +33,8 @@ def create_kv(key_screen, reachable_screens, custom_functions,
             cols: 1
             size_hint_y: None
             height: self.minimum_height
-            padding: 10
-            spacing: 10
+            padding: 30
+            spacing: 30
             Label:
                 text: '{key_screen.capitalize()}'
                 color: {text_color}
