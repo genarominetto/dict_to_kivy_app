@@ -2,7 +2,7 @@ import os
 from dict_to_kivy_app.modules.create_screen import create_screen
 from dict_to_kivy_app.modules.create_kv import create_kv
 
-def create_screen_and_kv(screen_dict, title_height, button_height):
+def create_screen_and_kv(screen_dict, title_height, button_height, navigation_columns):
     generated_py_files = []
     generated_kv_files = []
 
@@ -29,6 +29,8 @@ def create_screen_and_kv(screen_dict, title_height, button_height):
 
         kv_custom_params['title_height'] = title_height
         kv_custom_params['button_height'] = button_height
+        kv_custom_params['navigation_columns'] = navigation_columns  # Directly added
+
         kv_file_path = create_kv(key_screen, reachable_screens, custom_functions, **kv_custom_params)
         generated_kv_files.append(kv_file_path)
 
