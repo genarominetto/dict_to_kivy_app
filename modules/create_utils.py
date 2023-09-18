@@ -1,15 +1,13 @@
 import os
 import re
 
-def create_utils(screen_dict):
+def create_utils(screen_functions, target_app_directory):
     # Create utils directory if it doesn't exist
-    directory = 'utils/'
+    directory = os.path.join(target_app_directory, 'utils')
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    for screen_name, attributes in screen_dict.items():
-        custom_functions = attributes.get('functions', [])
-        
+    for screen_name, custom_functions in screen_functions.items():
         # Only create folders for screens with at least one custom function
         if custom_functions:
             screen_directory = os.path.join(directory, screen_name)
@@ -22,3 +20,4 @@ def create_utils(screen_dict):
 
                 with open(function_path, 'w') as f:
                     f.write(f"""def {sanitized_function_name}():\n\tprint("{function_text}")""")
+
