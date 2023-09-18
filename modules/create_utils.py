@@ -1,20 +1,24 @@
 import os
+import re
 
-def sanitize_function_name(text):
-    return ''.join(c.lower() for c in text if c.isalnum() or c == '_').replace(' ', '_')
+def create_utils(screen_dict):
+    # Create utils directory if it doesn't exist
+    directory = 'utils/'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
-def create_utils(screen_functions, target_app_directory):
-    utils_dir = os.path.join(target_app_directory, 'utils')
-    if not os.path.exists(utils_dir):
-        os.makedirs(utils_dir)
+    for screen_name, attributes in screen_dict.items():
+        custom_functions = attributes.get('functions', [])
+        
+        # Only create folders for screens with at least one custom function
+        if custom_functions:
+            screen_directory = os.path.join(directory, screen_name)
+            if not os.path.exists(screen_directory):
+                os.makedirs(screen_directory)
+            
+            for function_text in custom_functions:
+                sanitized_function_name = re.sub(r'[^a-zA-Z0-9_]', '', function_text.replace(' ', '_')).lower()
+                function_path = os.path.join(screen_directory, f"{sanitized_function_name}.py")
 
-    for screen_name, functions in screen_functions.items():
-        screen_utils_dir = os.path.join(utils_dir, screen_name)
-        if not os.path.exists(screen_utils_dir):
-            os.makedirs(screen_utils_dir)
-
-        for function_text in functions:
-            function_name = sanitize_function_name(function_text)
-            with open(os.path.join(screen_utils_dir, f"{function_name}.py"), 'w') as f:
-                f.write(f"def {function_name}():\n")
-                f.write(f"    print('{function_text}')\n")
+                with open(function_path, 'w') as f:
+                    f.write(f"""def {sanitized_function_name}():\n\tprint("{function_text}")""")
