@@ -2,7 +2,8 @@ import os
 import re
 
 def create_kv(key_screen, reachable_screens, custom_functions,
-              grid_columns=1, button_height=100, navigation_columns,
+              navigation_columns,
+              grid_columns=1, button_height=100,
               title_height=30, color=(1, 0, 0)):
 
     def adjust_color(c, amount=0.1):
