@@ -8,24 +8,18 @@ def create_kv(key_screen, reachable_screens, custom_functions,
     def adjust_color(c, amount=0.1):
         return min(1, max(0, c + amount))
 
-    # Calculate the average of the given color
     avg_color = sum(color) / 3.0
-
-    # Adjust the title background color based on the average
     adjust_amount = 0.1 if avg_color > 0.5 else -0.1
     title_color = (adjust_color(color[0], adjust_amount), 
                    adjust_color(color[1], adjust_amount), 
                    adjust_color(color[2], adjust_amount))
-
-    # Calculate contrast color for the title text
+    
     text_color = (0, 0, 0) if avg_color > 0.5 else (1, 1, 1)
 
-    # Create the directory if it doesn't exist
     directory = 'kv/'
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    # Generate .kv content for the screen
     kv_content = f"""<{key_screen.capitalize()}Screen>:
     ScrollView:
         canvas.before:
@@ -57,7 +51,6 @@ def create_kv(key_screen, reachable_screens, custom_functions,
                 height: self.minimum_height
                 padding: 10"""
 
-    # Generate buttons for each reachable screen
     buttons = []
     for screen in reachable_screens:
         button = f"""                Button:
@@ -67,22 +60,18 @@ def create_kv(key_screen, reachable_screens, custom_functions,
                     on_press: root.go_to_{screen}()"""
         buttons.append(button)
         
-    # Generate buttons for custom functions
     custom_function_buttons = []
-    if custom_functions:
-        for function_text in custom_functions:
-            function_name = re.sub('[^0-9a-zA-Z_]', '', function_text.replace(' ', '_')).lower()
-            custom_button = f"""                Button:
+    for function_text in custom_functions:
+        function_name = re.sub('[^0-9a-zA-Z_]', '', function_text.replace(' ', '_')).lower()
+        custom_button = f"""                Button:
                     text: '{function_text}'
                     size_hint_y: None
                     height: {button_height}
                     on_press: root.{function_name}()"""
-            custom_function_buttons.append(custom_button)
-    
-    # Combine the .kv content and buttons
+        custom_function_buttons.append(custom_button)
+
     full_kv_content = "\n".join([kv_content] + buttons + custom_function_buttons)
 
-    # Write the generated text to the .kv file
     output_file_path = os.path.join(directory, f"{key_screen}.kv")
     with open(output_file_path, 'w') as f:
         f.write(full_kv_content)
