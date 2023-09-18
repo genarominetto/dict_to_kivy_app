@@ -38,8 +38,9 @@ def create_screen_and_kv(screen_dict, title_height, button_height):
     # Iterate over each key_screen in the dictionary
     for key_screen, attributes in screen_dict.items():
 
-        # Extract reachable_screens and customization parameters from the attributes dictionary
+        # Extract reachable_screens, custom_functions, and customization parameters from the attributes dictionary
         reachable_screens = attributes.get('reachable_screens', [])
+        custom_functions = attributes.get('custom_functions', [])
         py_custom_params = {k: v for k, v in attributes.items() if k in py_specific_params}
         kv_custom_params = {k: v for k, v in attributes.items() if k in kv_specific_params}
 
@@ -47,10 +48,10 @@ def create_screen_and_kv(screen_dict, title_height, button_height):
         py_file_path = create_screen(key_screen, reachable_screens, directory=py_directory, **py_custom_params)
         generated_py_files.append(py_file_path)
 
-        # Generate the .kv file using the updated function
+        # Generate the .kv file
         kv_custom_params['title_height'] = title_height
         kv_custom_params['button_height'] = button_height
-        kv_file_path = create_kv(key_screen, reachable_screens, **kv_custom_params)
+        kv_file_path = create_kv(key_screen, reachable_screens, custom_functions, **kv_custom_params)
         generated_kv_files.append(kv_file_path)
 
     return generated_py_files, generated_kv_files
