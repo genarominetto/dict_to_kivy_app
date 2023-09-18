@@ -18,7 +18,13 @@ def create_screen(key_screen, reachable_screens, custom_functions=[], directory=
         os.makedirs(directory)
 
     class_definition = f"""from kivy.uix.screenmanager import Screen
+"""
 
+    # Add custom function imports
+    for func in custom_functions:
+        class_definition += f"from utils.{key_screen}.{func} import {func}\n"
+    
+    class_definition += f"""
 class {key_screen}Screen(Screen):
 """
 
@@ -33,9 +39,7 @@ class {key_screen}Screen(Screen):
     # Generate custom function placeholders
     custom_methods = []
     for func in custom_functions:
-        custom_method = f"""    def {func}(self):
-        print('Executing custom function {func}')
-        # Your code for custom function {func}"""
+        custom_method = f"""    {func} = staticmethod({func})"""
         custom_methods.append(custom_method)
 
     # Combine the class definition and methods
