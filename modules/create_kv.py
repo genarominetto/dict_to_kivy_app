@@ -2,7 +2,7 @@ import os
 import re
 
 def create_kv(key_screen, reachable_screens, custom_functions,
-              grid_columns=1, button_height=100, 
+              grid_columns=1, button_height=100, navigation_columns,
               title_height=30, color=(1, 0, 0)):
 
     def adjust_color(c, amount=0.1):
@@ -47,7 +47,7 @@ def create_kv(key_screen, reachable_screens, custom_functions,
                 size_hint_y: None
                 height: {title_height}
             GridLayout:
-                cols: {grid_columns}
+                cols: {navigation_columns}
                 size_hint_y: None
                 height: self.minimum_height
                 padding: 10
