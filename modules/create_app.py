@@ -3,6 +3,7 @@ import shutil
 from collections import deque
 from dict_to_kivy_app.modules.create_main import create_main
 from dict_to_kivy_app.modules.create_screen_and_kv import create_screen_and_kv
+from dict_to_kivy_app.modules.create_utils import create_utils  # Import create_utils
 
 def _bfs_is_reachable(start, graph):
     visited = set()
@@ -50,6 +51,10 @@ def create_app(screen_dict, folder_name, app_name, title_height, transition='Fad
         shutil.rmtree(target_app_directory)
     os.makedirs(target_app_directory)
 
+    # Create utils directory and function files
+    screen_functions = {k: v.get('functions', []) for k, v in screen_dict.items()}
+    create_utils(screen_functions, target_app_directory)
+    
     # Generate main.py file
     main_py_file_path = create_main(screen_dict, title_height, transition)
     shutil.move(main_py_file_path, os.path.join(target_app_directory, 'main.py'))
