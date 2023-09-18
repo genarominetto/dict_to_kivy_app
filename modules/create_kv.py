@@ -65,9 +65,21 @@ def create_kv(key_screen, reachable_screens,
                     height: {button_height}
                     on_press: root.go_to_{screen}()"""
         buttons.append(button)
-
+        
+    # Generate buttons for custom functions
+    custom_function_buttons = []
+    if custom_functions:
+        for function_text in custom_functions:
+            function_name = re.sub('[^0-9a-zA-Z_]', '', function_text.replace(' ', '_')).lower()
+            custom_button = f"""                Button:
+                    text: '{function_text}'
+                    size_hint_y: None
+                    height: {button_height}
+                    on_press: root.{function_name}()"""
+            custom_function_buttons.append(custom_button)
+    
     # Combine the .kv content and buttons
-    full_kv_content = "\n".join([kv_content] + buttons)
+    full_kv_content = "\n".join([kv_content] + buttons + custom_function_buttons)
 
     # Write the generated text to the .kv file
     output_file_path = os.path.join(directory, f"{key_screen}.kv")
