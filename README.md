@@ -8,7 +8,7 @@ To use the program **click on** the **'Open in Colab'** button and execute all c
 
 ## 📌 Table of Contents
 
-1. [⚙️ Input/Output](#-input/output)
+1. [⚙️ Input/Output](#-input-output)
 2. [🛠 Modules](#-modules)
 3. [🖥 Screen Properties](#-screen-properties)
 4. [🔧 Parameters](#-parameters)
