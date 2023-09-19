@@ -68,7 +68,7 @@ A fully functional Kivy program with multiple screens created with the `create_a
 
 ```python
 def sign_out():
-	print("Sign Out")
+    print("Sign Out")
 ```
 
 
