@@ -1,6 +1,6 @@
 # Converting Dictionary to Kivy App.
 
-Create Kivy applications with multiple interconnected screens in less than one minute. All you need to do is define the `app_structure` as a Python dictionary and execute the function `create_app`. Includes a `main.ipynb` notebook for demonstration purposes.
+Create Kivy applications with multiple interconnected screens in less than one minute. All you need to do is define the `screens` as a Python dictionary and execute the function `create_app`. Includes a `main.ipynb` notebook for demonstration purposes.
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
@@ -20,7 +20,7 @@ To use the program **click on** the **'Open in Colab'** button and execute all c
 
 ## 📥 Input
 
-- **Define Screens Dictionary:**
+- **Define Screens Dictionary:**title
 ```python
 screens = {
     'home': {
@@ -61,7 +61,7 @@ A fully functional Kivy program with multiple screens created with the `create_a
 ![app](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c3822619-aff6-43fd-80b4-37dca0eb09d7)
 
 
-**Note**: Each button corresponding to `custom_functions` in the `app_structure` dictionary is linked to a Python function in a file located in the `utils` folder. For example, if you have 'Sign Out' as one of your `custom_functions`, there will be a Python file in the `utils` folder containing a function like this:
+**Note**: Each button corresponding to `custom_functions` in the `screens` dictionary is linked to a Python function in a file located in the `utils` folder. For example, if you have 'Sign Out' as one of your `custom_functions`, there will be a Python file in the `utils` folder containing a function like this:
 
 
 
@@ -99,7 +99,7 @@ The following are available:
 
 ## 📱 Screen Properties
 
-For each screen in the `app_structure` dictionary, you can define the following properties:
+For each screen in the `screens` dictionary, you can define the following properties:
 
 - `reachable_screens`: A list of screens that can be navigated to.
 - `custom_functions`: A list of buttons, each of which prints a string when pressed.
