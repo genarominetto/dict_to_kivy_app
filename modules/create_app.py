@@ -37,6 +37,9 @@ def _validate_reachability(screen_dict):
 def create_app(screen_dict, folder_name, app_name, title_height, transition='FadeTransition',
                compress_and_download=True, button_height=100, navigation_columns=1):
 
+    # Rename all screens and reachable screens to replace spaces with underscores
+    screen_dict = {k.replace(' ', '_'): {sub_k: [elem.replace(' ', '_') for elem in sub_v] if sub_k == 'reachable_screens' else sub_v for sub_k, sub_v in v.items()} for k, v in screen_dict.items()}
+                   
     # Validate screen dictionary
     if not screen_dict:
         raise ValueError("No screens provided. Aborting app generation.")
