@@ -84,7 +84,7 @@ The following are available:
 For each screen in the `app_structure` dictionary, you can define the following properties:
 
 - `reachable_screens`: A list of screens that can be navigated to.
-- `custom_functions`: A list of custom functions or features. 
+- `custom_functions`: Each button prints a string when pressed
 - `grid_columns`: Number of columns in the layout.
 - `color`: Background color.
 
