@@ -1,6 +1,6 @@
 # Converting Dictionary to Kivy App.
 
-In less than one minute, you can create Kivy applications with multiple interconnected screens. All you need to do is define the app's structure as a Python dictionary. Includes a `main.ipynb` notebook for demonstration purposes.
+Create Kivy applications with multiple interconnected screens in less then one minute. All you need to do is define the `app_structure` as a Python dictionary and execute the function `create_app`. Includes a `main.ipynb` notebook for demonstration purposes.
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
