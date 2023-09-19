@@ -55,11 +55,17 @@ A fully functional Kivy program with multiple screens created with the `create_a
 
 ![screens](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
 
+![app](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/6401ce09-b36c-4788-b036-04d86890f567)
+
+
 An example of the generated file structure:
 
 
 
 ![files](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/b9179e8b-7584-4e6b-92b4-58b6bc2272d1)
+
+
+
 
 
 ## 🛠 Modules
