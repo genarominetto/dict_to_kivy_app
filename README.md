@@ -35,7 +35,6 @@ app_structure = {
 
 - **Function to Create and Download App:**
 ```python
-# Create a single app
 create_app(
     screen_dict=app_structure,
     folder_name="example_apps",
