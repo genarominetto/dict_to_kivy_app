@@ -20,9 +20,9 @@ To use the program **click on** the **'Open in Colab'** button and execute all c
 
 ## 📥 Input
 
-- **Define App Structure Dictionary:**
+- **Define Screens Dictionary:**
 ```python
-app_structure = {
+screens = {
     'home': {
         'reachable_screens': ['settings', 'profile', 'cart'],
         'custom_functions': ['Browse Products', 'Search', 'View Promotions', 'Recommendations'],
@@ -36,7 +36,7 @@ app_structure = {
 - **Function to Create and Download App:**
 ```python
 create_app(
-    screen_dict=app_structure,
+    screen_dict=screens,
     folder_name="example_apps",
     app_name="SampleApp",
     title_height=100,
