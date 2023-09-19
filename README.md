@@ -1,6 +1,6 @@
 # Dict to Kivy App
 
-Generate Kivy applications with multiple screens by defining the app's structure in a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration.
+Create Kivy applications with multiple interconected screens in less than one minute by defining the app's structure as a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration.
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
