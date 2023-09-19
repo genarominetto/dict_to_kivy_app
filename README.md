@@ -50,12 +50,26 @@ create_app(
 
 ## 📤 Output
 
+
 A fully functional Kivy program with multiple screens created with the `create_app` function:
+
 
 
 ![screens](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
 
+
 ![app](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c3822619-aff6-43fd-80b4-37dca0eb09d7)
+
+
+**Note**: Each button corresponding to `custom_functions` in the `app_structure` dictionary is linked to a Python function in a file located in the `utils` folder. For example, if you have 'Sign Out' as one of your `custom_functions`, there will be a Python file in the `utils` folder containing a function like this:
+
+
+
+
+```python
+def sign_out():
+	print("Sign Out")
+```
 
 
 An example of the generated file structure:
