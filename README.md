@@ -68,12 +68,15 @@ An example of the generated file structure:
 
 The following are available:
 
-- `create_screen`: Create individual screens for the Kivy application.
-- `create_utils`: Create utility methods for the `custom_functions`.
 - `create_app`: Generate the complete Kivy application.
+- `create_main`: Generate the main execution script for the app.
+- `create_screen`: Create individual screens for the Kivy application.
 - `create_kv`: Create `.kv` files that holds the application's style and layout.
 - `create_screen_and_kv`: Generate both the screen and `.kv` files simultaneously.
-- `create_main`: Generate the main execution script for the app.
+- `create_utils`: Create utility methods for the `custom_functions`.
+
+
+
 
 
 ## 🖥 Screen Properties
