@@ -30,6 +30,7 @@ app_structure = {
         'color': (0.9, 0.5, 0),
     },
       ...
+}
 ```
 
 - **Function to Create and Download App:**
