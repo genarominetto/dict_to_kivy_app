@@ -2,7 +2,7 @@
 
 Generate Kivy applications with multiple screens by defining the app's structure in a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration.
 
-To use the program **click on** the **main.ipynb** file, then click on the **'Open in Colab'** button, and finally execute all cells.
+To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
 
@@ -103,4 +103,6 @@ For the `create_app` function, you can define the following parameters:
 - `compress_and_download`: Whether to compress and download the generated app.
 
 
-To use the program **click on** the **main.ipynb** file, then click on the **'Open in Colab'** button, and finally execute all cells.
+To use the program **click on** the **'Open in Colab'** button and execute all cells.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
