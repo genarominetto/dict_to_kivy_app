@@ -50,9 +50,7 @@ create_app(
 
 ## 📤 Output
 
-A fully functional Kivy program with multiple screens.
-
-Example of generated screens from the `dict_to_kivy_app` package:
+A fully functional Kivy program with multiple screens created with the `create_app` function:
 
 
 ![screens](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
