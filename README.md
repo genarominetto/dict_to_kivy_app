@@ -20,7 +20,7 @@ To use the program **click on** the **'Open in Colab'** button and execute all c
 
 ## 📥 Input
 
-- **Define Screens Dictionary:**title
+- **Define Screens Dictionary:**
 ```python
 screens = {
     'home': {
