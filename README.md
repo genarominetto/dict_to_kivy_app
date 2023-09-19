@@ -1,66 +1,100 @@
-# Dict to Kivy App 🚀
+# Dict to Kivy App
 
-Generate Kivy applications with multiple screens by simply defining the app's structure in a Python dictionary. Includes a `main.ipynb` notebook for demonstration. 📚✨
+Generate Kivy applications with multiple screens by defining the app's structure in a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration.
+
+To use the program **click on** the **main.ipynb** file, then click on the **'Open in Colab'** button, and finally execute all cells.
+
+
 
 ## 📌 Table of Contents
 
-1. [📘 Description](#-description)
-2. [⚙️ Input and Output](#️-input-and-output)
-3. [🖥 Screen Properties](#-screen-properties)
-4. [🌟 Features](#-features)
-5. [🔧 Parameters](#-parameters)
+1. [⚙️ Input and Output](#️-input-and-output)
+2. [🖥 Screen Properties](#-screen-properties)
+3. [🛠 Modules](#-features)
+4. [🔧 Parameters](#-parameters)
 
-## 📘 Description
 
-The `dict_to_kivy_app` package allows you to focus solely on defining your app's structure while taking care of the tedious boilerplate code required to create a Kivy app. 🛠🌈
 
-_An example of a generated screen from the `dict_to_kivy_app` package._ 🎨✨
 
 ## ⚙️ Input and Output
 
 ### 📥 Input
 
-- **Import Required Modules:**
-```python
-from dict_to_kivy_app.modules.create_screen import create_screen
-# ... other imports
-```
-
 - **Define App Structure:**
 ```python
 app_structure = {
-# ... structure details
-}
+    'home': {
+        'reachable_screens': ['settings', 'profile', 'cart'],
+        'custom_functions': ['Browse Products', 'Search', 'View Promotions', 'Recommendations'],
+        'grid_columns': 2,
+        'color': (0.9, 0.5, 0),
+    },
+      ...
 ```
 
 - **Generate App:**
 ```python
+# Generate a single app
 create_app(
-# ... parameters
+    screen_dict=app_structure,
+    folder_name="example_apps",
+    app_name="SampleApp",
+    title_height=100,
+    button_height=50,
+    navigation_columns=3,
+    transition='SwapTransition',
+    compress_and_download=True
 )
+
 ```
 
 ### 📤 Output
 
-A fully functional Kivy program with multiple screens and more! 🌟🖥
+A fully functional Kivy program with multiple screens.
 
-_An example of the generated file structure._ 🗃🌈
+Example of generated screens from the `dict_to_kivy_app` package:
+
+
+![screens](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
+
+An example of the generated file structure:
+
+
+
+![files](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/b9179e8b-7584-4e6b-92b4-58b6bc2272d1)
 
 ## 🖥 Screen Properties
 
-For each screen in the `app_structure` dictionary, you can define the following properties: 🎛✨
+For each screen in the `app_structure` dictionary, you can define the following properties:
 
-- `reachable_screens`: A list of screens that can be navigated to. 🚀
-- `custom_functions`: A list of custom functions or features. 🎨
-- `grid_columns`: Number of columns in the layout. 📊
-- `color`: Background color. 🎨
+- `reachable_screens`: A list of screens that can be navigated to.
+- `custom_functions`: A list of custom functions or features. 
+- `grid_columns`: Number of columns in the layout.
+- `color`: Background color.
 
-## 🌟 Features
+## 🛠 Modules
 
-- `create_screen`, `create_utils`, `create_app` and many more! 🛠✨
+The following are available:
+
+- `create_screen`: Create individual screens for the Kivy application.
+- `create_utils`: Create utility methods for the `custom_functions`.
+- `create_app`: Generate the complete Kivy application.
+- `create_kv`: Create `.kv` files that holds the application's style and layout.
+- `create_screen_and_kv`: Generate both the screen and `.kv` files simultaneously.
+- `create_main`: Generate the main execution script for the app.
 
 ## 🔧 Parameters
 
-- `screen_dict`, `folder_name`, `app_name` and other customization parameters! 🎛🌈
+For the `create_app` function, you can define the following parameters:
 
-Enjoy crafting your Kivy apps! 💎✨
+- `screen_dict`: Previously defined dictionary with the app's structure.
+- `folder_name`: Name of the folder where the generated files will reside.
+- `app_name`: Name of the generated Kivy application.
+- `title_height`: Height of the title bar in the app.
+- `button_height`: Height of the buttons in the app.
+- `navigation_columns`: Number of columns for navigation buttons.
+- `transition`: The type of screen transition to use.
+- `compress_and_download`: Whether to compress and download the generated app.
+
+
+To use the program **click on** the **main.ipynb** file, then click on the **'Open in Colab'** button, and finally execute all cells.
