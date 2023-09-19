@@ -20,7 +20,7 @@ To use the program **click on** the **main.ipynb** file, then click on the **'Op
 
 ### 📥 Input
 
-- **Define App Structure:**
+- **Define App Structure Dictionary:**
 ```python
 app_structure = {
     'home': {
@@ -32,7 +32,7 @@ app_structure = {
       ...
 ```
 
-- **Generate App:**
+- **Generate App Function:**
 ```python
 # Generate a single app
 create_app(
