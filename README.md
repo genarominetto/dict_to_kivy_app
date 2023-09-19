@@ -10,7 +10,7 @@ To use the program **click on** the **main.ipynb** file, then click on the **'Op
 
 1. [⚙️ Input and Output](#️-input-and-output)
 2. [🖥 Screen Properties](#-screen-properties)
-3. [🛠 Modules](#-features)
+3. [🛠 Modules](#-modules)
 4. [🔧 Parameters](#-parameters)
 
 
