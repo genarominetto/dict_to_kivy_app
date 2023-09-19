@@ -62,12 +62,20 @@ def create_kv(key_screen, reachable_screens, custom_functions,
 
     buttons = []
     for screen in reachable_screens:
-        button = f"""                Button:
+        if screen == key_screen:  # Check if the reachable screen is the same as the key screen
+            button = f"""                Button:
+                    text: '{screen.capitalize()}'
+                    size_hint_y: None
+                    height: {button_height}
+                    disabled: True"""  # Disable the button
+        else:
+            button = f"""                Button:
                     text: '{screen.capitalize()}'
                     size_hint_y: None
                     height: {button_height}
                     on_press: root.go_to_{screen}()"""
         buttons.append(button)
+
 
     custom_functions_grid = f"""            GridLayout:
                 cols: {grid_columns}
