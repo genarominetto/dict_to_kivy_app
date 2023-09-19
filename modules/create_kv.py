@@ -5,9 +5,7 @@ def create_kv(key_screen, reachable_screens, custom_functions,
               navigation_columns,
               grid_columns=1, button_height=100,
               title_height=30, color=(1, 0, 0)):
-    print(key_screen)
-    print("---")
-    print(reachable_screens)
+
     def adjust_color(c, amount=0.1):
         return min(1, max(0, c + amount))
 
