@@ -9,8 +9,8 @@ To use the program **click on** the **main.ipynb** file, then click on the **'Op
 ## 📌 Table of Contents
 
 1. [⚙️ Input and Output](#️-input-and-output)
-2. [🖥 Screen Properties](#-screen-properties)
-3. [🛠 Modules](#-modules)
+2. [🛠 Modules](#-modules)
+3. [🖥 Screen Properties](#-screen-properties)
 4. [🔧 Parameters](#-parameters)
 
 
@@ -63,14 +63,6 @@ An example of the generated file structure:
 
 ![files](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/b9179e8b-7584-4e6b-92b4-58b6bc2272d1)
 
-## 🖥 Screen Properties
-
-For each screen in the `app_structure` dictionary, you can define the following properties:
-
-- `reachable_screens`: A list of screens that can be navigated to.
-- `custom_functions`: A list of custom functions or features. 
-- `grid_columns`: Number of columns in the layout.
-- `color`: Background color.
 
 ## 🛠 Modules
 
@@ -82,6 +74,17 @@ The following are available:
 - `create_kv`: Create `.kv` files that holds the application's style and layout.
 - `create_screen_and_kv`: Generate both the screen and `.kv` files simultaneously.
 - `create_main`: Generate the main execution script for the app.
+
+
+## 🖥 Screen Properties
+
+For each screen in the `app_structure` dictionary, you can define the following properties:
+
+- `reachable_screens`: A list of screens that can be navigated to.
+- `custom_functions`: A list of custom functions or features. 
+- `grid_columns`: Number of columns in the layout.
+- `color`: Background color.
+
 
 ## 🔧 Parameters
 
