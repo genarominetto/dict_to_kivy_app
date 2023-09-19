@@ -11,7 +11,7 @@ To use the program **click on** the **'Open in Colab'** button and execute all c
 1. [📥 Input](#-input)
 2. [📤 Output](#-output)
 3. [🛠 Modules](#-modules)
-4. [🖥 Screen Properties](#-screen-properties)
+4. [📱 Screen Properties](#-screen-properties)
 5. [🔧 Parameters](#-parameters)
 
 
@@ -79,7 +79,7 @@ The following are available:
 
 
 
-## 🖥 Screen Properties
+## 📱 Screen Properties
 
 For each screen in the `app_structure` dictionary, you can define the following properties:
 
