@@ -4,10 +4,7 @@ Generate Kivy applications with multiple screens by defining the app's structure
 
 To use the program **click on** the **main.ipynb** file, then click on the **'Open in Colab'** button, and finally execute all cells.
 
-
-![open](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/d716fcb5-08f8-4ee7-bffa-312c2270dde1)
-
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
 
 ## 📌 Table of Contents
 
