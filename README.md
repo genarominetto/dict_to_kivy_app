@@ -124,3 +124,6 @@ For the `create_app` function, you can define the following parameters:
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
+
+Contributions or suggestions are more than welcome.
+
