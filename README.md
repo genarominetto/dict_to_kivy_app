@@ -1,6 +1,6 @@
-# Dict to Kivy App
+# Converting Dictionary to Kivy App.
 
-Create Kivy applications with multiple interconected screens in less than one minute by defining the app's structure as a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration.
+Create Kivy applications with multiple interconnected screens in less than one minute by defining the app's structure as a Python **dictionary**. Includes a `main.ipynb` notebook for demonstration purposes.
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
@@ -84,7 +84,7 @@ The following are available:
 For each screen in the `app_structure` dictionary, you can define the following properties:
 
 - `reachable_screens`: A list of screens that can be navigated to.
-- `custom_functions`: Each button prints a string when pressed
+- `custom_functions`: A list of buttons, each of which prints a string when pressed.
 - `grid_columns`: Number of columns in the layout.
 - `color`: Background color.
 
