@@ -10,7 +10,15 @@ def create_kv(key_screen, reachable_screens, custom_functions,
         return min(1, max(0, c + amount))
 
     avg_color = sum(color) / 3.0
-    adjust_amount = 0.1 if avg_color > 0.5 else -0.1
+
+    # New conditions for avg_color
+    if avg_color > 0.9:
+        adjust_amount = -0.1
+    elif avg_color < 0.1:
+        adjust_amount = 0.1
+    else:
+        adjust_amount = 0.1 if avg_color > 0.5 else -0.1
+
     title_color = (adjust_color(color[0], adjust_amount), 
                    adjust_color(color[1], adjust_amount), 
                    adjust_color(color[2], adjust_amount))
