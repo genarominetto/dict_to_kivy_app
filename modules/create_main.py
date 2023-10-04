@@ -5,7 +5,11 @@ def create_main(screen_dict, title_height, transition='FadeTransition'):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    header = f"""from kivy.lang import Builder
+    header = f"""
+from kivy.config import Config
+Config.set('graphics', 'rotation', '0')  # This should be set to 0 for normal orientation
+    
+from kivy.lang import Builder
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, {transition}
 """
