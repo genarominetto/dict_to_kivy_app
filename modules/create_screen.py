@@ -46,6 +46,14 @@ class {key_screen}Screen(Screen):
         self.manager.current = '{screen}'"""
         methods.append(method)
 
+    # Add on_enter method between go_to methods and staticmethods
+    on_enter_method = f"""
+    def on_enter(self):
+        print('{key_screen} screen has fully loaded')"""
+
+    # Combine the class definition and methods
+    full_class_definition = class_definition + "\n".join(methods) + on_enter_method + "\n" + "\n".join(custom_methods)
+    
     # Generate custom function placeholders
     custom_methods = []
     for func in custom_functions:
