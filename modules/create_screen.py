@@ -51,9 +51,6 @@ class {key_screen}Screen(Screen):
     def on_enter(self):
         print('{key_screen} screen has fully loaded')"""
 
-    # Combine the class definition and methods
-    full_class_definition = class_definition + "\n".join(methods) + on_enter_method + "\n" + "\n".join(custom_methods)
-    
     # Generate custom function placeholders
     custom_methods = []
     for func in custom_functions:
@@ -62,7 +59,7 @@ class {key_screen}Screen(Screen):
         custom_methods.append(custom_method)
 
     # Combine the class definition and methods
-    full_class_definition = class_definition + "\n".join(methods) + "\n" + "\n".join(custom_methods)
+    full_class_definition = class_definition + "\n".join(methods) + on_enter_method + "\n" + "\n".join(custom_methods)
 
     # Write to the Python file
     output_file_path = os.path.join(directory, f"{key_screen}.py")
