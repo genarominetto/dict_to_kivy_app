@@ -99,7 +99,7 @@ The following are available:
 
 ## 📱 Screen Properties
 
-For each screen in the `screens` dictionary, you can define the following properties:
+For each key in the `screens` dictionary, you can define the following properties:
 
 - `reachable_screens`: A list of screens that can be navigated to.
 - `custom_functions`: A list of buttons, each of which prints a string when pressed.
