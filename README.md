@@ -4,7 +4,7 @@ Create Kivy applications with multiple interconnected screens in less than one m
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/genarominetto/dict_to_kivy_app/blob/main/main.ipynb)
 
 ## 📌 Table of Contents
 
@@ -55,10 +55,10 @@ A fully functional Kivy program with multiple screens created with the `create_a
 
 
 
-![screens](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
+![screens](https://github.com/genarominetto/dict_to_kivy_app/assets/95663273/c960b88e-080e-4827-b3af-c29928954284)
 
 
-![app](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/c3822619-aff6-43fd-80b4-37dca0eb09d7)
+![app](https://github.com/genarominetto/dict_to_kivy_app/assets/95663273/c3822619-aff6-43fd-80b4-37dca0eb09d7)
 
 
 **Note**: Each button corresponding to `custom_functions` in the `screens` dictionary is linked to a Python function in a file located in the `utils` folder. For example, if you have 'Sign Out' as one of your `custom_functions`, there will be a Python file in the `utils` folder containing a function like this:
@@ -76,7 +76,7 @@ An example of the generated file structure:
 
 
 
-![files](https://github.com/GenaroHacker/dict_to_kivy_app/assets/95663273/b9179e8b-7584-4e6b-92b4-58b6bc2272d1)
+![files](https://github.com/genarominetto/dict_to_kivy_app/assets/95663273/b9179e8b-7584-4e6b-92b4-58b6bc2272d1)
 
 
 
@@ -123,7 +123,7 @@ For the `create_app` function, you can define the following parameters:
 
 To use the program **click on** the **'Open in Colab'** button and execute all cells.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenaroHacker/dict_to_kivy_app/blob/main/main.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/genarominetto/dict_to_kivy_app/blob/main/main.ipynb)
 
 Contributions or suggestions are more than welcome.
 
